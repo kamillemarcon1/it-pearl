@@ -1,0 +1,40 @@
+/* Color scheme: #797D62,  #FFCB69,  #9B9B7A, #E8AC65, #BAA587, #D08C60, #D9AE94, #B58463, #F1DCA7, #997B66 */ 
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html{
+    box-sizing:border-box;
+}
+*,*:before,*:after{
+box-sizing: inherit;
+}
+
+body{
+    background-color: #797D62;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+
+main{
+    background-color: #FCCB69; 
+    width:60vw;
+    /* long form*/
+    margin:40px;
+    margin-top:40px;
+    margin-right:auto;
+    margin-bottom:40px;
+    margin-left:auto;
+/* Top / Right / Bottom / Left */
+    margin: 40px auto 40px auto;
+    /* TOP/Bottom | LEFT/RIGHT */
+    margin: 40px auto; 
+    border:20px groove #9B9B7A;
+    border-radius: 40px; 
+}
+
+header.primary {
+    background-color:#E8AC65;
+    padding:20px;
+    border-radius:20px;
+    background-image:url(https://assets.codepen.io/7248/bg_1.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
