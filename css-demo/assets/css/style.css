@@ -7,6 +7,11 @@ html{
 *,*:before,*:after{
 box-sizing: inherit;
 }
+/*---------- Utility Classes -----------*/
+.container{
+    padding:40px;
+    margin:auto;
+}
 
 body{
     background-color: #797D62;
@@ -37,4 +42,72 @@ header.primary {
     background-image:url(https://assets.codepen.io/7248/bg_1.png);
     background-repeat:no-repeat;
     background-size:cover;
+    display:flex;
+    border-bottom:3px groove #BAA587;
+}
+
+/*  #797D62,  #FFCB69,  #9B9B7A, #E8AC65, #BAA587, #D08C60, #D9AE94, #B58463, #F1DCA7, #997B66 */
+header.primary h1, header.primary h2{
+    margin:0;
+}
+
+header.primary h1 a{
+    color:#BAA587;
+    text-decoration:none;
+    font-size:2.5rem;
+    text-shadow:2px 2px #D08C60;
+}
+
+header.primary h2{
+    color:#D9AE94;
+    text-shadow:#B58463;
+}
+
+header.primary div.hgroup{
+    width:70%;
+}
+
+header.primary nav{
+    width:30%;
+}
+
+header.primary nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+header.primary nav ul li{
+    margin-bottom:10px;
+}
+
+header.primary nav ul li a{
+border: 1px double #F1DCA7;
+border-right:10px solid #9B9B7A;
+border-radius:20px 0;
+color:#997B66;
+display:block;
+background-color:rgba(255,203,105,1);
+padding:10px 10px 10px 0;
+text-align:right;
+transition:.3s;
+text-decoration:none;
+}
+
+header.primary nav a:hover{
+    background-color:rgba(232,172,101,1);
+    text-decoration:underline;
+}
+
+#content{
+    line-height:1.8rem;
+}
+
+/*  #797D62,  #FFCB69,  #9B9B7A, #E8AC65, #BAA587, #D08C60, #D9AE94, #B58463, #F1DCA7, #997B66 */
+
+#content h2, #content h3{
+    color:#BAA587;
+    border:7.5px dotted #D08C60;
+    padding:7.5px;
+    border-radius:15px 15px;
 }
