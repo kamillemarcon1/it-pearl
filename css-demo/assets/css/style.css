@@ -36,12 +36,12 @@ main{
 }
 
 header.primary {
-    background-color:#E8AC65;
     padding:20px;
     border-radius:20px;
-    background-image:url(https://assets.codepen.io/7248/bg_1.png);
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-color: #FFCB69;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23FFCB69' cx='50' cy='0' r='50'/%3E%3Cg fill='%23fbc669' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f6c269' cx='50' cy='100' r='50'/%3E%3Cg fill='%23f2bd6a' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23eeb96a' cx='50' cy='200' r='50'/%3E%3Cg fill='%23e9b56a' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23e4b06a' cx='50' cy='300' r='50'/%3E%3Cg fill='%23dfac6a' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23daa86a' cx='50' cy='400' r='50'/%3E%3Cg fill='%23d5a46a' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23d0a06a' cx='50' cy='500' r='50'/%3E%3Cg fill='%23cb9c6a' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c6986a' cx='50' cy='600' r='50'/%3E%3Cg fill='%23c19469' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23bb9069' cx='50' cy='700' r='50'/%3E%3Cg fill='%23b68d69' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b08968' cx='50' cy='800' r='50'/%3E%3Cg fill='%23aa8568' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a58267' cx='50' cy='900' r='50'/%3E%3Cg fill='%239f7e67' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23997B66' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: contain;
     display:flex;
     border-bottom:3px groove #BAA587;
 }
@@ -52,15 +52,15 @@ header.primary h1, header.primary h2{
 }
 
 header.primary h1 a{
-    color:#BAA587;
+    color:#E8AC65;;
     text-decoration:none;
     font-size:2.5rem;
-    text-shadow:2px 2px #D08C60;
+    text-shadow:2px 2px #997B66;
 }
 
 header.primary h2{
-    color:#D9AE94;
-    text-shadow:#B58463;
+    color:#997B66;
+    text-shadow:3px 3px #FCCB69;
 }
 
 header.primary div.hgroup{
