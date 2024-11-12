@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>HTML5 Practice</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Short keyword rich description of the site's purpose" />
+  <!-- Keywords Meta is deprecated-->
+  <meta name="keywords" content="UALR, UA Little Rock, University of Arkansas at Little Rock" />
+  <meta name="author" content="Thomas Wallace" />
+</head>
+
+<body>
+  <main>
+    <header class="primary">
+      <h1>Prototype HTML Document Example</h1>
+    </header>
+    <section id="content">
+      <h2 id="sample">Properly Marking up an HTML Document</h2>
+      <!--  Avoid Presentational HTML Elements if possible -->
+      <hr />
+
+      <p>This is a paragraph. Often times designers will use <q>Dummy Text</q> as a placeholder in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <em>Praesent volutpat</em> velit sed massa. In <del>volutpat eros sagittis</del> ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, <strong>blandit quis</strong>, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. <sup><a href="#bottom">1</a></sup></p>
+
+      <article class="post">
+        <header>
+          <h2>Article Title</h2>
+        </header>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste, eum nisi ipsam facere reiciendis quo ex voluptatibus optio delectus, aspernatur et iure, reprehenderit eos cumque! Quisquam, adipisci neque.
+        <footer>
+          <h6>By Thomas Wallace</h6>
+        </footer>
+      </article>
+      <article class="post">
+        <header>
+          <h2>Article Title</h2>
+        </header>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste, eum nisi ipsam facere reiciendis quo ex voluptatibus optio delectus, aspernatur et iure, reprehenderit eos cumque! Quisquam, adipisci neque.
+        <footer>
+          <h6>By Thomas Wallace</h6>
+        </footer>
+      </article>
+      <article class="post">
+        <header>
+          <h2>Article Title</h2>
+        </header>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste, eum nisi ipsam facere reiciendis quo ex voluptatibus optio delectus, aspernatur et iure, reprehenderit eos cumque! Quisquam, adipisci neque.
+        <footer>
+          <h6>By Thomas Wallace</h6>
+        </footer>
+      </article>
+
+      <p> Aenean eget ipsum id arcu <sub>bibendum porttitor</sub>. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <sup>Mauris volutpat</sup>. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis.</p>
+
+      <h3>This is a Subsection of the Primary Content</h3>
+      <p>This is a paragraph. Often times designers will use "Dummy Text" as a placeholder in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet.</p>
+      <figure>
+        <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt=" UALR Logo" />
+        <figcaption>UA Little Rock Logo</figcaption>
+      </figure>
+      <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis.</p>
+
+      <!--This is a list of instructions.-->
+
+      <ol>
+        <li>Instruction</li>
+        <li>Instruction</li>
+        <li>Instruction
+          <ul>
+            <li>Ramen</li>
+            <li>Cheetos</li>
+            <li>Jolt</li>
+            <li>Bread</li>
+          </ul>
+        </li>
+        <li>Instruction</li>
+        <li>Instruction</li>
+      </ol>
+
+      <!--This is a list of items to purchase at the grocery store.-->
+
+      <ul>
+        <li>Ramen</li>
+        <li>Cheetos</li>
+        <li>Jolt</li>
+        <li>Bread</li>
+      </ul>
+
+      <!--This is an Example of how we should mark up a term and its description(s)-->
+
+      <dl>
+        <dt>Term</dt>
+        <dd>Description 1</dd>
+        <dd>Description 2</dd>
+        <dt>Term</dt>
+        <dd>Description 1</dd>
+        <dt>Term</dt>
+        <dd>Description 1</dd>
+        <dd>Description 2</dd>
+        <dd>Description 3</dd>
+      </dl>
+
+      <h4>This is a Subsection of Subsection I</h4>
+
+      <form method="get" action="processing-script.php">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label><input type="text" id="name" name="name" placeholder="Full Name" />
+          <label for="address">Address:</label><textarea id="address" name="address"></textarea>
+          <label for="color">Favorite Color?</label>
+          <select id="color" name="color">
+            <option value="r">Red</option>
+            <option value="g">Green</option>
+            <option value="b">Blue</option>
+            <option value="null" selected>---</option>
+          </select>
+          <input type="submit" value="Take me to your leader" />
+        </fieldset>
+      </form>
+      <table border="1">
+        <caption>Grocery List</caption>
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Cost</th>
+        </tr>
+        <tr>
+          <td>Ramen</td>
+          <td>12</td>
+          <td>.35</td>
+        </tr>
+        <tr>
+          <td>Cheetos</td>
+          <td>2</td>
+          <td>1.99</td>
+        </tr>
+        <tr>
+          <td>Bread</td>
+          <td>1</td>
+          <td>4.99</td>
+        </tr>
+      </table>
+      <address>
+        Thomas Wallace<br />
+        123 Street<br />
+        Little Rock, AR , 72204
+      </address>
+
+      <blockquote>This is a Quote. Content precedes design. Design in the absence of content is not design, it's decoration. <cite>From Designing with Web Standards by Jeffery Zeldman.</cite></blockquote>
+
+      <h3>This is a Subsection of the Primary Content</h3>
+
+      <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat.</p>
+      <p> Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. Proin adipiscing ultrices dui. Duis porttitor, libero ut eleifend pellentesque, risus turpis fermentum est, vel nonummy lorem est id nisl. Nulla facilisi. In sagittis tortor. Vestibulum dictum leo vitae augue. Morbi in odio sed nulla luctus sodales.</p>
+    </section>
+    <nav class="primary">
+      <ul>
+        <li><a href="https://ualr.edu#news" target="_blank">Absolute Link</a></li>
+        <li><a href="folder-name/relative.html" title="Adds a verbose description to what is behind the link">Relative Link</a></li>
+        <li><a href="#top" download>Anchor Link</a></li>
+        <li><a href="mailto:mail@ualr.edu">Email Link</a></li>
+      </ul>
+    </nav>
+    <footer class="primary">
+      <h6 id="bottom">&copy; Thomas Wallace | <a href="#top">Back to Top</a></h6>
+    </footer>
+  </main>
+  <!--#contanier-->
+</body>
+
+</html>
