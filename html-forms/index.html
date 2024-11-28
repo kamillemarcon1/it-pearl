@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,11 +8,10 @@
   <meta name="keywords" content="New Patient Registration Form">
   <meta name="author" content="Kamille Marcon">
   <link href="assets/css/style.css" rel="stylesheet">
-  <script src="script.js"></script> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
-  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
 </head>
-
 <body>
     <header class="primary">
       <h1>New Patient Registration</h1>
@@ -21,58 +20,77 @@
         <header>
           <h3>Please fill out the form below</h3>
         </header>
-    </div>
-          <form id="SubmitPatientForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        
-          </form>
-          <script>
-          $( "#SubmitPatientForm" ).validate({
-          
-          });                    
-          </script>
-       <div>
-            <label for="FirstName">First Name: </label>
-            <input type="text" id="FirstName" name="FirstName" size="30" maxlength="30">
-            </div>
-        <div>
-                <label for="MiddleInitial">Middle Initial: </label>
-                <input type="text" id="MiddleInitial" name="MiddleInitial" size="1" maxlength="1">
-                </div>
-         <div>
-                    <label for="LastName">Last Name: </label>
-                    <input type="text" id="LastName" name="LastName" size="30" maxlength="30">
-          </div>
-          <div>
-                    <label for="Email">Email: </label>
-                    <input type="text" id="Email" name="Email" size="30" maxlength="30">
-                    </div>
+        </div>
+<form id="SubmitPatientForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
 <div>
-<label for="Sex">Sex:</label>
-<input id="Sex">
-<label for="M"><input type="radio" name="Sex" id="M" value="M">Male</label>
+  <label for="FirstName">First Name:</label>
+<input type="text" id="FirstName" name="FirstName" size="30" maxlength="30"
+       data-rule-required="true"  data-msg-required="First Name is required"> 
+<label for="FirstName" class="error"></label>
+</div>
+<div>
+  <label for="MiddleInitial">Middle Initial:</label>
+  <input type="text" id="MiddleInitial" name="MiddleInitial" size="1" maxlength="1"> 
+  </div>
+<div>
+ <label for="LastName">Last Name: </label>
+  <input type="text" id="LastName" name="LastName" size="30" maxlength="30" 
+  data-rule-required="true"  data-msg-required="Last Name is required">
+   <label for="LastName" class="error"></label>
+</div>
+
+<div>
+<label for="Email">Email: </label>
+<input type="text" id="Email" name="Email" size="30" maxlength="30" 
+  data-rule-required="true"  data-msg-required="Email is required">
+  <label for="Email" class="error"></label>
+</div>
+
+<div>
+<label>Sex:</label>
+<label for="M"><input type="radio" name="Sex" id="M" value="M" 
+data-rule-required="true" data-msg-required="Sex is required">Male</label>
 <label for="F"><input type="radio" name="Sex" id="F" value="F">Female</label>
 <label for="N/A"><input type="radio" name="Sex" id="N/A" value="N/A">N/A</label>
 </div>
+
 <div>
-            <label for="Birthday">Birthday: </label>
-            <input type="text" id="Birthday" name="Birthday" size="8" maxlength="8">
-            </div>
+  <label for="Birthday">Birthday: </label>
+  <input type="date" id="Birthday" name="Birthday" size="10"
+data-rule-required="true"  data-msg-required="Birthday is required">
+  <label for="Birthday" class="error"></label>
+</div>
+
 <div>
-            <label for="Height">Height (inches): </label>
-            <input type="text" id="Height" name="Height" size="3" maxlength="3">
-            </div>
-<div>
+  <label for="Height">Height (inches): </label>
+<input type="text" id="Height" name="Height" size="3" maxlength="3" 
+       data-rule-required="true"  data-msg-required="Height is required" 
+       data-rule-number="true" data-msg-number="Height must be a number"
+       data-rule-min="12" data-msg-min="Height must be greater than or equal to 12 inches"
+       data-rule-max="120" data-msg-max="Height must be less than or equal to 120 inches">
+       <label for="Height" class="error"></label>
+</div>
+    
+ <div>
             <label for="Weight">Weight (pounds): </label>
-            <input type="text" id="Weight" name="Weight" size="3" maxlength="3">
-            </div>
-          <hr>
+            <input type="text" id="Weight" name="Weight" size="3" maxlength="3" 
+       data-rule-required="true"  data-msg-required="Weight is required" 
+       data-rule-number="true" data-msg-number="Weight must be a number"
+       data-rule-min="10" data-msg-min="Weight must be greater than or equal to 10 lbs"
+       data-rule-max="500" data-msg-max="Weight must be less than or equal to 500 lbs">
+       <label for="Weight" class="error"></label>
+</div>
+<hr>
 <div>
-            <label for="PhoneNumber">Phone Number: </label>
-            <input type="text" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14">
-            </div>
-<div>
-<label for="MaritalStatus">Marital Status:</label>
-<select name="MaritalStatus" id="MaritalStatus">
+ <label for="PhoneNumber">Phone Number: </label>
+ <input type="tel" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14"
+      data-rule-required="true"  data-msg-required="Must be a valid US phone number">
+      <label for="PhoneNumber" class="error"></label>
+ </div>
+ <div>
+ <label for ="MaritalStatus">Marital Status: </label>
+<select name="MaritalStatus" id="MaritalStatus"
+    data-rule-required="true" data-msg-required="Marital Status is required">
     <option value="">Select a Status...</option>
     <option value="S">Single</option>
     <option value="M">Married</option>
@@ -80,34 +98,103 @@
     <option value="L">Legally Separated</option>
     <option value="W">Widowed</option>
 </select>
+<label for="MaritalStatus" class="error"></label>
 </div>
 <div>
-            <label for="Address">Address: </label>
-            <input type="text" id="Address" name="Address" size="30" maxlength="30">
-            </div>
+     <label for="Address">Address: </label>
+     <input type="text" id="Address" name="Address" size="30" maxlength="30"
+     data-rule-required="true" data-msg-required="Address is required">
+     <label for="Address" class="error"></label>
+    </div>
 <div>
-            <label for="City">City: </label>
-            <input type="text" id="City" name="City" size="30" maxlength="30">
-   <label for="State">,</label>
-  <input id="State">
-   <select>
-	
-</select>
-  <label for="Zip"></label>
-            <input type="text" id="Zip" name="Zip" size="5" maxlength="5">
-            </div>
-          <hr>
+<label for="City">City: </label>
+      <input type="text" id="City" name="City" size="30" maxlength="30" 
+      data-rule-required="true" data-msg-required="City is required">
+      <label for="City" class="error"></label>
+ </div>
+ <div>
+  <label for="State">State:</label>
+<select name="State" id="State"
+    data-rule-required="true" data-msg-required="State is required">
+  <option value="">Select a State</option>
+  <option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+   </select>
+<label for="State" class="error"></label>
+   </div>
+  <div>
+  <label for="Zip">Zipcode:</label>
+            <input type="text" id="Zip" name="Zip" size="5" maxlength="5" data-rule-required="true"  data-msg-required="Zipcode is required" 
+       data-rule-number="true" data-msg-number="Zipcode must be a number"
+       data-rule-min="1" data-msg-min="Zipcode must be 5 digits"
+       data-rule-max="5" data-msg-max="Zipcode must be 5 digits">
+<label for="Zip" class="error"></label>
+</div>
 <div>
-<label for="Medications">Taking Medications:</label>
-  <input id="Medications">
-<label for="Y"><input type="radio" name="Y" id="Y" value="Y">Yes</label>
-<label for="N"><input type="radio" name="N" id="N" value="N">No</label>
+<label>Taking Medications:</label>
+<label for="Y"><input type="radio" name="Medications" id="Y" value="Y">Yes</label>
+<label for="N"><input type="radio" name="Medications" id="N" value="N">No</label>
 </div>
 <div>
   <label for="MedicationsList">If yes, list medications here:</label>
   <textarea id="MedicationsList" name="MedicationsList" rows="3" cols="30"></textarea>
-</div>
+</div> 
 <hr>
-  <input type="submit" value="Submit Patient Form" Name="SubmitPatientForm">
+<div><input type="submit" value="Submit Patient Form" Name="SubmitPatientForm"></div>
+<script>
+$( "#SubmitPatientForm" ).validate({
+
+});
+</script>
+  </form>
  </body>
     </html>
